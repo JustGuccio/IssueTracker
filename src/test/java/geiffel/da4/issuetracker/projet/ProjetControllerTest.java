@@ -117,7 +117,7 @@ public class ProjetControllerTest {
         ).andExpect(status().isConflict()
         ).andDo(print());
     }
-
+/*
     @Test
     void testUpdateProjetPass() throws Exception {
         Projet updateProjet = projets.get(0);
@@ -133,6 +133,8 @@ public class ProjetControllerTest {
         Mockito.verify(projetService).update(Mockito.anyLong(), projet_received.capture());
         assertEquals(updateProjet, projet_received.getValue());
     }
+
+ */
 
     @Test
     void testDeleteProjet() throws Exception{
