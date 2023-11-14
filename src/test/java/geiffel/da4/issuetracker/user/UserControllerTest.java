@@ -39,7 +39,7 @@ public class UserControllerTest {
     @Autowired
     MockMvc mockMvc;
 
-    @MockBean
+    @MockBean(name = "jpa")
     UserService userService;
 
     private List<User> users;
