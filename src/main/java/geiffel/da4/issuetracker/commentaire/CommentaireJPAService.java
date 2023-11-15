@@ -15,7 +15,7 @@ import java.util.Optional;
 @Primary
 public class CommentaireJPAService implements CommentaireService{
 
-    private final static String  comMentaire = "Commentaire";
+    private static final String  comMentaire = "Commentaire";
 
     @Autowired
     private CommentaireRepository commentaireRepository;
