@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 @Service
 @Qualifier("jpa")
@@ -38,14 +39,14 @@ public class CommentaireJPAService implements CommentaireService{
     @Override
     public List<Commentaire> getAllByAuthorId(Long id) {
         return getAll().stream()
-                .filter(commentaire -> commentaire.getAuthorId()==id)
+                .filter(commentaire -> Objects.equals(commentaire.getAuthorId(), id))
                 .toList();
     }
 
     @Override
     public List<Commentaire> getAllByIssueCode(Long code) {
         return getAll().stream()
-                .filter(commentaire -> commentaire.getIssueCode()==code)
+                .filter(commentaire -> Objects.equals(commentaire.getIssueCode(), code))
                 .toList();
     }
 
