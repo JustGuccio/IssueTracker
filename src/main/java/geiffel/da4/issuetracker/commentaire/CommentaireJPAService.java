@@ -2,7 +2,6 @@ package geiffel.da4.issuetracker.commentaire;
 
 import geiffel.da4.issuetracker.exceptions.ResourceAlreadyExistsException;
 import geiffel.da4.issuetracker.exceptions.ResourceNotFoundException;
-import geiffel.da4.issuetracker.issue.Issue;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;

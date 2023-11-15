@@ -7,7 +7,6 @@ import geiffel.da4.issuetracker.issue.IssueRepository;
 import geiffel.da4.issuetracker.user.Fonction;
 import geiffel.da4.issuetracker.user.User;
 import geiffel.da4.issuetracker.user.UserRepository;
-import org.aspectj.internal.lang.reflect.StringToType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -36,7 +35,7 @@ public class IssueTrackerStudentsApplication {
 
     @Bean
     public CommandLineRunner setUpBDD() {
-        return (args) -> {
+        return args -> {
             List<User> users = new ArrayList<>(){{
                 add(new User(1L, "Machin", Fonction.USER));
                 add(new User(2L, "Chose", Fonction.USER));
