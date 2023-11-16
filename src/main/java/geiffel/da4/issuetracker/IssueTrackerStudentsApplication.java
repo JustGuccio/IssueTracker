@@ -48,17 +48,14 @@ public class IssueTrackerStudentsApplication {
             users.add(new User(1L, "Machin", Fonction.USER));
             users.add(new User(2L, "Chose", Fonction.USER));
             users.add(new User(3L, "Truc", Fonction.DEVELOPPER));
-
             userRepository.saveAll(users);
+            List<Issue> issues = new ArrayList<>();
 
-            List<Issue> issues = new ArrayList<>(){{
-                add(new Issue(1L , "Title" , "Content" , userRepository.getReferenceById(1L), Timestamp.valueOf("2023-09-27 00:00:00"), Timestamp.valueOf("2023-09-28 00:00:00")));
-            }};
+            issues.add(new Issue(1L , "Title" , "Content" , userRepository.getReferenceById(1L), Timestamp.valueOf("2023-09-27 00:00:00"), Timestamp.valueOf("2023-09-28 00:00:00")));
             issueRepository.saveAll(issues);
 
-            List<Commentaire> commentaires = new ArrayList<>(){{
-                add(new Commentaire(1L , userRepository.getReferenceById(1L), issueRepository.getReferenceById(1L) , "Contenu"));
-            }};
+            List<Commentaire> commentaires = new ArrayList<>();
+            commentaires.add(new Commentaire(1L , userRepository.getReferenceById(1L), issueRepository.getReferenceById(1L) , "Contenu"));
             commentaireRepository.saveAll(commentaires);
         };
     }
