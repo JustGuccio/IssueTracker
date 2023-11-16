@@ -7,6 +7,7 @@ import geiffel.da4.issuetracker.issue.IssueRepository;
 import geiffel.da4.issuetracker.user.Fonction;
 import geiffel.da4.issuetracker.user.User;
 import geiffel.da4.issuetracker.user.UserRepository;
+import geiffel.da4.issuetracker.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -22,14 +23,18 @@ import java.util.Map;
 @SpringBootApplication
 public class IssueTrackerStudentsApplication {
 
-    @Autowired
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
+    private final IssueRepository issueRepository;
 
+    private final CommentaireRepository commentaireRepository;
     @Autowired
-    private IssueRepository issueRepository;
+    public IssueTrackerStudentsApplication(UserRepository userRepository, IssueRepository issueRepository, CommentaireRepository commentaireRepository){
+        this.userRepository = userRepository;
+        this.issueRepository = issueRepository;
+        this.commentaireRepository = commentaireRepository;
+    }
 
-    @Autowired
-    private CommentaireRepository commentaireRepository;
+
 
     public static void main(String[] args) {
         SpringApplication.run(IssueTrackerStudentsApplication.class, args);
