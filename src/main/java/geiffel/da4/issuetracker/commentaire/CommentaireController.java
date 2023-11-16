@@ -31,19 +31,19 @@ public class CommentaireController {
     }
 
     @PostMapping("")
-    public ResponseEntity create(@RequestBody Commentaire commentaire) {
+    public ResponseEntity<Commentaire> create(@RequestBody Commentaire commentaire) {
         Commentaire created = commentaireService.create(commentaire);
         return ResponseEntity.created(URI.create("/commentaires/"+created.getId())).build();
     }
 
     @PutMapping("{id}")
-    public ResponseEntity update(@PathVariable Long id, @RequestBody Commentaire commentaire) {
+    public ResponseEntity<Commentaire> update(@PathVariable Long id, @RequestBody Commentaire commentaire) {
         commentaireService.update(id, commentaire);
         return ResponseEntity.noContent().build();
     }
 
     @DeleteMapping("{id}")
-    public ResponseEntity delete(@PathVariable Long id) {
+    public ResponseEntity<Commentaire> delete(@PathVariable Long id) {
         commentaireService.delete(id);
         return ResponseEntity.noContent().build();
     }
