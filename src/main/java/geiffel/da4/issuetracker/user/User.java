@@ -85,9 +85,9 @@ public class User {
 
 
     @Override
-    public boolean equals(Object obj) {
+    public boolean equals(Object obj){
         if (getClass() != obj.getClass()){
-            return false;
+            throw  new NullPointerException();
         }
         User comparing = (User) obj;
         return Objects.equals(this.id, comparing.getId()) &&
