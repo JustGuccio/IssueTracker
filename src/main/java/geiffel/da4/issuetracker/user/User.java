@@ -85,18 +85,15 @@ public class User {
 
 
     @Override
-    public boolean equals(Object obj) throws NullPointerException{
-        if (getClass() != obj.getClass()){
-            throw  new NullPointerException();
-        }
-        User comparing = (User) obj;
-        return Objects.equals(this.id, comparing.getId()) &&
-            this.nom.equals(comparing.getNom()) &&
-            this.fonction == comparing.getFonction();
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return Objects.equals(id, user.id) && Objects.equals(nom, user.nom) && fonction == user.fonction && Objects.equals(commentaireEcrits, user.commentaireEcrits);
     }
 
     @Override
     public int hashCode() {
-        return 1;
+        return Objects.hash(id, nom, fonction, commentaireEcrits);
     }
 }
