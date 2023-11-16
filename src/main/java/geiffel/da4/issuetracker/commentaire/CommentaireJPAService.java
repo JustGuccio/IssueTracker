@@ -17,8 +17,11 @@ public class CommentaireJPAService implements CommentaireService{
 
     private static final String  COMMENTAIRE = "Commentaire";
 
+    private final CommentaireRepository commentaireRepository;
     @Autowired
-    private CommentaireRepository commentaireRepository;
+    public CommentaireJPAService(CommentaireRepository commentaireRepository){
+        this.commentaireRepository = commentaireRepository;
+    }
 
 
     @Override

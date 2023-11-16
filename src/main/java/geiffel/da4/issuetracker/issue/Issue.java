@@ -2,9 +2,7 @@ package geiffel.da4.issuetracker.issue;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import geiffel.da4.issuetracker.commentaire.Commentaire;
-import geiffel.da4.issuetracker.commentaire.CommentaireJSONSerializer;
 import geiffel.da4.issuetracker.user.User;
 import geiffel.da4.issuetracker.utils.TimestampUtils;
 import jakarta.persistence.Entity;

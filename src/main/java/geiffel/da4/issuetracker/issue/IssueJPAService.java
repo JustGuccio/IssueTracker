@@ -2,7 +2,6 @@ package geiffel.da4.issuetracker.issue;
 
 import geiffel.da4.issuetracker.exceptions.ResourceAlreadyExistsException;
 import geiffel.da4.issuetracker.exceptions.ResourceNotFoundException;
-import geiffel.da4.issuetracker.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
@@ -16,8 +15,11 @@ import java.util.Optional;
 @Primary
 public class IssueJPAService implements IssueService{
 
+    private final IssueRepository issueRepository;
     @Autowired
-    private IssueRepository issueRepository;
+    public IssueJPAService(IssueRepository issueRepository){
+        this.issueRepository = issueRepository;
+    }
 
     @Override
     public List<Issue> getAll() {

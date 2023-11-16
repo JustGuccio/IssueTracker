@@ -1,7 +1,5 @@
 package geiffel.da4.issuetracker.projet;
 
-import geiffel.da4.issuetracker.issue.Issue;
-import geiffel.da4.issuetracker.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -32,19 +30,19 @@ public class ProjetController {
     }
 
     @PostMapping("")
-    public ResponseEntity create(Projet projet){
+    public ResponseEntity<Projet> create(Projet projet){
         Projet created = projetService.create(projet);
         return ResponseEntity.created(URI.create("/projets/"+created.getId().toString())).build();
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity updateProjet(@PathVariable Long id, @RequestBody Projet projet) {
+    public ResponseEntity<Projet> updateProjet(@PathVariable Long id, @RequestBody Projet projet) {
         projetService.update(id, projet);
         return ResponseEntity.noContent().build();
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity deleteProjet(@PathVariable Long id) {
+    public ResponseEntity<Projet> deleteProjet(@PathVariable Long id) {
         projetService.delete(id);
         return ResponseEntity.noContent().build();
     }

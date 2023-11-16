@@ -7,7 +7,6 @@ import geiffel.da4.issuetracker.issue.IssueRepository;
 import geiffel.da4.issuetracker.user.Fonction;
 import geiffel.da4.issuetracker.user.User;
 import geiffel.da4.issuetracker.user.UserRepository;
-import geiffel.da4.issuetracker.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -16,9 +15,7 @@ import org.springframework.context.annotation.Bean;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @SpringBootApplication
 public class IssueTrackerStudentsApplication {

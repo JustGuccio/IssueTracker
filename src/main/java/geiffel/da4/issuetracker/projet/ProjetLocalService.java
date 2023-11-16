@@ -2,7 +2,6 @@ package geiffel.da4.issuetracker.projet;
 
 import geiffel.da4.issuetracker.exceptions.ResourceAlreadyExistsException;
 import geiffel.da4.issuetracker.exceptions.ResourceNotFoundException;
-import geiffel.da4.issuetracker.user.User;
 import geiffel.da4.issuetracker.utils.LocalService;
 import org.springframework.stereotype.Service;
 

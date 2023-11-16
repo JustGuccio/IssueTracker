@@ -5,7 +5,6 @@ import geiffel.da4.issuetracker.exceptions.ResourceAlreadyExistsException;
 import geiffel.da4.issuetracker.exceptions.ResourceNotFoundException;
 import geiffel.da4.issuetracker.utils.LocalService;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

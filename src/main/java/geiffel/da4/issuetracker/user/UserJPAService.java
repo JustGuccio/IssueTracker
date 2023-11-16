@@ -13,8 +13,12 @@ import java.util.Optional;
 @Qualifier("jpa")
 public class UserJPAService implements UserService {
 
+    private final UserRepository userRepository;
+
     @Autowired
-    private UserRepository userRepository;
+    public UserJPAService(UserRepository userRepository){
+        this.userRepository = userRepository;
+    }
 
     @Override
     public List<User> getAll() {

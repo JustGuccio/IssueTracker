@@ -49,20 +49,20 @@ public class UserController {
  */
 
     @PostMapping
-    public ResponseEntity createUser(@RequestBody User user) {
-                User created_user = userService.create(user);
-                return ResponseEntity.created(URI.create("/users/" + created_user.getId().toString())).build();
+    public ResponseEntity<User> createUser(@RequestBody User user) {
+                User createdUser = userService.create(user);
+                return ResponseEntity.created(URI.create("/users/" + createdUser.getId().toString())).build();
 
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity updateUser(@PathVariable Long id, @RequestBody User user) {
+    public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User user) {
         userService.update(id, user);
         return ResponseEntity.noContent().build();
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity deleteUser(@PathVariable Long id) {
+    public ResponseEntity<User> deleteUser(@PathVariable Long id) {
         userService.delete(id);
         return ResponseEntity.noContent().build();
     }

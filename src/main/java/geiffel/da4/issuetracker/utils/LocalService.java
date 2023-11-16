@@ -20,7 +20,7 @@ public abstract class LocalService<T1, T2> {
 
     public LocalService() { this.allValues = new ArrayList<>(); }
 
-    public LocalService(List<T1> allValues) {
+    protected LocalService(List<T1> allValues) {
         this.allValues = allValues;
     }
 
