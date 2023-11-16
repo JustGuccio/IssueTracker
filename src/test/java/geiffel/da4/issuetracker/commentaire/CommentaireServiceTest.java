@@ -18,7 +18,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @ContextConfiguration(classes = CommentaireService.class)
-public class CommentaireServiceTest {
+class CommentaireServiceTest {
 
     private CommentaireService commentaireService;
     private List<Commentaire> commentaires;

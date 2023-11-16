@@ -19,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @ContextConfiguration(classes = IssueService.class)
-public class IssueServiceTest {
+class IssueServiceTest {
 
     private IssueService issueService;
     private List<Issue> issues;

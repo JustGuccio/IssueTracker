@@ -14,7 +14,7 @@ import java.time.Instant;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class CommentaireTest {
+class CommentaireTest {
 
     @Test
     void whenCreating_shouldBeAddedToIssueAndAuthorCommentairesList() {

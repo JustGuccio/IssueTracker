@@ -36,7 +36,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest
 @ContextConfiguration(classes = ProjetController.class)
 @Import(ExceptionHandlingAdvice.class)
-public class ProjetControllerTest {
+class ProjetControllerTest {
 
 
     @Autowired

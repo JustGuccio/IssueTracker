@@ -36,7 +36,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc(addFilters = false)
 @ContextConfiguration(classes = IssueController.class)
 @Import(ExceptionHandlingAdvice.class)
-public class IssueControllerTest {
+class IssueControllerTest {
 
     @Autowired
     MockMvc mockMvc;

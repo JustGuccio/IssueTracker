@@ -35,7 +35,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest
 @ContextConfiguration(classes = CommentaireController.class)
 @Import(ExceptionHandlingAdvice.class)
-public class CommentaireControllerTest {
+class CommentaireControllerTest {
 
     @Autowired
     MockMvc mockMvc;
