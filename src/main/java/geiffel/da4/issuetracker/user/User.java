@@ -85,7 +85,7 @@ public class User {
 
 
     @Override
-    public boolean equals(Object obj){
+    public boolean equals(Object obj) throws NullPointerException{
         if (getClass() != obj.getClass()){
             throw  new NullPointerException();
         }
